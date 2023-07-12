@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src='main.js'></script>
+    <style>a{ color: rgb(113, 94, 72);text-decoration: underline;}
+        p{color: rgb(89, 85, 85);}
+        h1{color: rgb(157, 77, 20);}
+        h1{text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <br/>
+                <h1>Superhero Comics</h1>
+                <p>
+                    Superhero comics are one of the most common genres of American comic books. 
+                    The genre rose to prominence in the 1930s and became extremely popular in the 1940s 
+                    and has remained the dominant form of comic book in North America since the 1960s.
+                    Superhero comics feature stories about superheroes and the universes these characters inhabit.
+                </p>
+                <p>
+                    Beginning with the introduction of Superman in 1938 in Action Comics #1 — an anthology of 
+                    adventure features — comic books devoted to superheroes (heroic people with extraordinary 
+                    or superhuman abilities and skills, or god-like powers and attributes) ballooned into a 
+                    widespread genre, coincident with the beginnings of World War II and the end of the
+                    Great Depression.
+                </p>
+                <strong><hr></strong>
+                <h1>SuperHeroes</h1>
+                <p>
+                    Superheroes have their antecedents in the semidivine heroes of myth and legend
+                    . Protagonists who exhibit feats of incredible strength, fighting prowess, and cunning 
+                    are commonplace in both scripture and early secular literature. Comic strips of the early 
+                    20th century provided the perfect visual medium for the development for these larger-than-life 
+                    characters, and in June 1938 writer Jerry Siegel and artist Joseph Shuster unveiled Superman, 
+                    the archetypal superhero. Superheroes have proved to be an enduring addition to popular culture, 
+                    eventually spreading to radio, film, television, and electronic games. This is an alphabetically 
+                    ordered list of superheroes.
+                </p>
+                <hr>
+                <br/>
+                {% for super in articles %}
+
+                <a href="/{{super['name']}}" data-show-preview="true"><h3><li>{{super["name"]}}</li> </h3></a>
+                
+                {% endfor %}
+            </div>
+            <div class="col-md-2">
+            </div>
+            <a href="/feedback"><strong style="text-align: center;">Please provide  your valuable suggestions</strong></a>
+        </div>
+    </div>
+    
+</body>
+</html>
